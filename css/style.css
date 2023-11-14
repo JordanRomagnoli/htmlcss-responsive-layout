@@ -520,9 +520,20 @@ main > .started .privacy a{
     text-decoration: underline;
 }
 
+footer{
+    background-color: #333333;
+    padding-top: calc(var(--main_padding) *2);
+    text-align: center;
+}
 
-.footer{
-    background-color: ;
+footer p{
+    color: white;
+    margin-bottom: calc(var(--main_margin_bottom) *2);
+}
+
+footer p a{
+    color: var(--main_color);
+    text-decoration: underline;
 }
 @media screen and (min-width: 992px){
 
