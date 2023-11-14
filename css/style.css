@@ -1,52 +1,375 @@
-
-/*
-    RESET 
-*/
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url(./reset.css);
 
 /*
     GENERAL
 */
 
-*{
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --debug_border: 1px dashed black;
+    --main_header_color: #0084fd;
+    --main_padding: 20px;
+    --card_size: calc(100% / 3);
+    --main_margin_bottom: 1.5rem;
+    --button_padding: 8px 10px;
+    
+}
+
+.row{
+    display: flex;
 }
 
 .container{
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: var(--main_padding);
 }
 
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+* > .button{
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.col{
+    width: 100%;
+}
+
+
+h4{
+    color: var(--main_header_color);
+    font-size: 1.5em;
+}
+
+.card{
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+    border-radius: 3rem;
+    padding: calc(var(--main_padding) * 2);
+}
 /*
     HEADER
 */
 
+/* TOP HEADER */
+
+header > .top-header{
+    background-color: var(--main_header_color);
+}
+
+header > .top-header .menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--main_padding) / 2) 0;
+}
+
+header > .top-header .menu-header img{
+    display: block;
+}
+
+.top-header .menu-header .dinamic_menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header .menu-header .dinamic_menu .menu-nav{
+    display: none;
+}
+
+.top-header .menu-header .dinamic_menu > .hamburger{
+    color: white;
+    font-size: 1.5rem;
+} 
+
+.top-header .menu-header .dinamic_menu li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.top-header .menu-header .dinamic_menu li > a:not(.button){
+    color: white;
+    padding: 5px;
+}
+
+.top-header .menu-header .dinamic_menu li > .button{
+    color: black;
+    background-color: white;
+}
+
+/* BOTTOM HEADER */
+
+ .bottom-header{
+    padding-top: var(--main_padding);
+    padding-bottom: calc(var(--main_padding)*2);
+}
+
+header .bottom-header .jumbotron{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    padding: 20px;
+}
+
+header .bottom-header .jumbotron > .col_2-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: var(--main_padding);
+    padding-left: var(--main_padding);
+    padding-right: var(--main_padding);
+}
+
+header .bottom-header .jumbotron > .col{
+    margin-bottom: var(--main_margin_bottom);
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #b5ddff;
+    border-radius: var(--main_padding);
+}
+
+header .bottom-header .jumbotron > .col_2-3 .col_info, header .bottom-header .jumbotron > .col_2-3 .col_image{
+    width: 100%;
+}
+
+header .bottom-header .jumbotron > .col_2-3 .col_image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header .bottom-header .jumbotron > .col_2-3 h4, header .bottom-header .jumbotron > .col_2-3 p{
+    margin-bottom: var(--main_margin_bottom);
+    line-height: 1.8rem;
+}
+
+header .bottom-header .jumbotron > .col_2-3 .button{
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 3.5em;
+    background-color: var(--main_header_color);
+}
+
+header .bottom-header .jumbotron > .col_2-3 img{
+    height: 300px;
+    display: block;
+    margin-top: 40px;
+}
+
+header .bottom-header .jumbotron > .col_1-3{
+    padding: var(--main_padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 360px;
+}
+
+header .bottom-header .jumbotron > .col h2{
+    color: var(--main_header_color);
+    font-size: 3em;
+    margin-bottom: calc(var(--main_margin_bottom) / 2);
+}
+
+header .bottom-header .jumbotron > .col h4{
+    margin-bottom: var(--main_margin_bottom);
+}
+
+header .bottom-header .jumbotron > .col p{
+    line-height: 1.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+
+
 /*
     MAIN
 */
+
+main > .planning{
+    background-color: #9792e4;
+    padding-top: calc(var(--main_padding) *2) ;
+}
+
+main > .planning .main_row .col img{
+    width: 100%;
+    display: block;
+    margin-bottom: 60px;
+}
+
+main > .planning .main_row .col{
+    color: white;
+}
+
+main > .planning .main_row .col h2, main > .planning .main_row .col p{
+    margin-bottom: var(--main_margin_bottom);
+}
+
+main > .planning .main_row .col p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+main > .planning .main_row .col.secondary{
+    display: flex;
+    align-items: flex-end;
+}
+
+main > .planning .main_row .col .card{
+    background-color: white;
+    color: black;
+}
+
+main > .planning .main_row .col .card h2, main > .planning .main_row .col .card p{
+    margin-bottom: var(--main_margin_bottom);
+}
+
+main > .planning .main_row .col > .card img{
+    width: 100%;
+    margin-bottom: 0;
+    display: block;
+    margin-bottom: var(--main_margin_bottom);
+}
+
+main > .planning .main_row .col .card p{
+    font-style: italic;
+}
+
+main > .planning .main_row .col > .card .button{
+    background-color: #9792e4;
+    color: black;
+    padding: 18px 20px;
+    border-radius: 25px;
+}
+
+main > .testimonials{
+    padding: calc(var(--main_padding) *2) 0;
+    text-align: center;
+}
+
+main > .testimonials h3, main > .testimonials h2, main > .testimonials p{
+    margin-bottom: var(--main_margin_bottom);
+}
+
+main > .testimonials h3{
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+main > .testimonials h2{
+    line-height: 1.4em;
+}
+
+main > .testimonials p{
+    line-height: 2em;
+}
+
+main > .testimonials h2{
+    color: #9792e4;
+    font-size: 2.5rem;
+}
+
+main > .testimonials .main_row .card{
+    background-color: #9792e4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+main > .testimonials .main_row .card .img_resize, main > .testimonials .main_row .card p{
+    margin: var(--main_margin_bottom);
+} 
+
+main > .testimonials .main_row .card h3{
+    font-weight: bold;
+}
+
+main > .testimonials .main_row .card .img_resize{
+    width: 200px;
+    height: 200px;
+
+}
+
+main > .testimonials .main_row .card .img_resize img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 
 /*
     MEDIA QUERY
 */
 
-/* Caso base: mobile piccolo */
-@media screen and (min-width 480px){
+@media screen and (min-width: 768px){
+    .col_1-3{
+        max-width: calc((100% / 3) - 10px);
+    }
+    
+    .col_2-3{
+        max-width: calc(var(--card_size) *2 - 10px);
+    }
+
+    header .bottom-header .jumbotron > .col_2-3 .col_image{
+        display: block;
+    }
 }
-/* Caso: mobile grande*/
-@media screen and (min-width 576px){
+
+
+@media screen and (min-width: 992px){
+
+    .container{
+        max-width: 1200px;
+    }
+
+    .container.small{
+        max-width: 1000px;
+    }
+
+    .top-header .menu-header .dinamic_menu > .hamburger{
+        display: none;
+    }
+
+    .top-header .menu-header .dinamic_menu .menu-nav{
+        display: block;
+    }
+    
+    header .bottom-header .jumbotron > .col_2-3 .col_info, header .bottom-header .jumbotron > .col_2-3 .col_image{
+        width: 50%;
+    }
+
+    header .bottom-header .jumbotron > .col_2-3 .col_image{
+        display: flex;
+    }
+
+    .col-50{
+        width: 50%;
+        padding: 20px;
+    }
+
+    main > .planning .main_row{
+        display: flex;
+    }
+
+    main > .planning .main_row .col .card{
+        width: 80%;
+    }
 }
-/* Caso: tablet*/
-@media screen and (min-width 768px){
-}
-/* Caso: desktop*/
-@media screen and (min-width 992px){
-}
+    
+    
 
 
 
@@ -54,6 +377,37 @@
     DEBUG
 */
 
-.debug, .debug > div{
-    border: 1px dashed black;
-}
+/* .debug .planning .row .col-50 .card{
+    min-height: 200px;
+} */
+
+/* .debug .planning .col-50{
+    min-height: 200px;
+    border: var(--debug_border);
+} */
+
+/* .debug .planning{
+    min-height: 500px;
+} */
+
+
+/*.debug .bottom-header .row > *{
+    min-height: 50px;
+    border: var(--debug_border);
+     background-color: blueviolet; 
+}*/
+
+/* .debug .bottom-header .row{
+    min-height: 300px;
+    border: var(--debug_border);
+} */
+
+/*.debug .menu-header {
+     min-height: 80px;
+     border: var(--debug_border); 
+}*/
+
+/* .button{
+    border: var(--debug_border);
+    background-color: red;
+} */
