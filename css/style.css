@@ -475,7 +475,55 @@ main > .about_us div .col-30 > .button{
     }
 }
 
+main > .started{
+    background-color: var(--main_color);
+    text-align: center;
+    padding: calc(var(--main_padding) *2);
+}
 
+main > .started h4, main > .started h2, main > .started h1, main > .started p, main > .started .button{
+    margin-bottom: var(--main_margin_bottom);
+}
+
+main > .started h4{
+    color: white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+main > .started h2{
+    color: white;
+    font-size: 2rem;
+}
+
+main > .started h1{
+    font-size: 3.5rem;
+    color: #fdc15f;
+}
+
+main > .started p{
+    color: white;
+    line-height: 1.8rem;
+}
+
+main > .started .button{
+    font-weight: bold;
+    color: var(--main_color);
+    background-color: white;
+    padding: 20px 80px;
+    border-radius: 30px;
+}
+
+main > .started .privacy a{
+    color: white;
+    text-decoration: underline;
+}
+
+
+.footer{
+    background-color: ;
+}
 @media screen and (min-width: 992px){
 
     .container{
