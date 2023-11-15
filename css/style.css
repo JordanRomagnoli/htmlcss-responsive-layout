@@ -209,8 +209,13 @@ header .bottom-header .jumbotron > .col p{
     MAIN
 */
 
-main > .planning{
+main > :nth-child(odd){
     background-color: var(--main_color);
+}
+
+/* PLANNING */
+
+main > .planning{
     padding-top: calc(var(--main_padding) *2) ;
 }
 
@@ -265,6 +270,8 @@ main > .planning .main_row .col > .card .button{
     border-radius: 25px;
 }
 
+/* TESTIMONIALS */
+
 main > .testimonials{
     padding: calc(var(--main_padding) *2) 0;
     text-align: center;
@@ -310,9 +317,7 @@ main > .testimonials .main_row .card h3{
     font-weight: bold;
 }
 
-main > .benefits{
-    background-color: var(--main_color);
-}
+/* BENEFITS */
 
 main > .benefits{
     text-align: center;
@@ -362,29 +367,27 @@ main > .benefits .row > .col{
     background-color: var(--main_color);
 }
 
+/* ABOUT US */
 
 main > .about_us{
     padding: calc(var(--main_padding) *2);
 }
 
+main > .about_us h2, main > .about_us div > p, main > .about_us div .col-30 .img_resize, main > .about_us div .col-30 > h3{
+    margin-bottom: var(--main_margin_bottom);
+}
+
 main > .about_us h2{
     font-size: 2.5rem;
     color: var(--main_color);
-    margin-bottom: var(--main_margin_bottom);
 }
 
 main > .about_us p{
     line-height: 2rem;
 }
 
-main > .about_us div > p{
-    margin-bottom: var(--main_margin_bottom);
-}
-
-
 main > .about_us div .col-30 .img_resize{
     position: relative;
-    margin-bottom: var(--main_margin_bottom);
 }
 
 main > .about_us div .col-30 .img_resize > i{
@@ -399,7 +402,6 @@ main > .about_us div .col-30 > h3{
     color: var(--main_color);
     font-size: 1.8rem;
     line-height: 2.5rem;
-    margin-bottom: var(--main_margin_bottom);
 }
 
 main > .about_us div .col-30 > .button{
@@ -408,8 +410,9 @@ main > .about_us div .col-30 > .button{
     padding: 8px 15px;
 }
 
+/* STARTED */
+
 main > .started{
-    background-color: var(--main_color);
     text-align: center;
     padding: calc(var(--main_padding) *2);
 }
@@ -453,6 +456,12 @@ main > .started .privacy a{
     text-decoration: underline;
 }
 
+
+
+/* 
+    FOOTER
+*/
+
 footer{
     background-color: #333333;
     padding-top: calc(var(--main_padding) *2);
@@ -468,6 +477,9 @@ footer p a{
     color: var(--main_color);
     text-decoration: underline;
 }
+
+
+
 
 /*
     MEDIA QUERY
@@ -488,14 +500,15 @@ footer p a{
 
     .col-70{
         width: 70%;
-        padding: var(--main_padding);
+        padding: calc(var(--main_padding) *2);
+        padding-top: 0;
     }
 
     .col-30{
         width: 30%;
     }
 
-    .card_50{
+    .card_dinamic{
         width: calc(98% / 2);
     }
 
@@ -575,7 +588,7 @@ footer p a{
         width: 80%;
     }
 
-    .card_50{
+    .card_dinamic{
         width: calc(95% / 3);
     }
 
